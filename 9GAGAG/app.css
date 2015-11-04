@@ -1,5 +1,3 @@
-
-
 body {
   display:flex;
   font: 13px Helvetica;
@@ -70,9 +68,6 @@ nav {
 nav ul {
   display:flex;
   align-items: center;
-  margin:0;
-  padding:0;
-  list-style: none;
 }
 
 nav #logo {
@@ -82,7 +77,6 @@ nav #logo {
     background-size: 40px 40px;
     box-sizing: border-box;
     border-right: 1px solid #333;
-    display: block;
 }
 
 nav #logo a {
@@ -91,7 +85,11 @@ nav #logo a {
   display: block;
 }
 
-nav ul li a {
+nav #logo {
+  display: block;
+}
+
+nav>ul li a {
   text-align: center;
   color: #fff;
   font-weight: 700;
@@ -100,17 +98,8 @@ nav ul li a {
   line-height: 48px;
 }
 
-nav ul li {
-  border-right: 1px solid #333;
-  padding: 0 1em;
-}
-
-nav ul li:hover {
-  background-color: rgba(255,255,255,.2);
-}
-
 nav ul#tags li a.danger:after {
-  content: 'NSFW';
+  content: 'New';
   position: relative;
   text-transform: uppercase;
   padding: 0 3px;
@@ -122,6 +111,15 @@ nav ul#tags li a.danger:after {
   background-color: red;
   height: 12px;
   line-height: 12px;
+}
+
+nav> ul li:hover {
+  background-color: rgba(255,255,255,.2);
+}
+
+nav> ul li {
+  border-right: 1px solid #333;
+  padding: 0 1em;
 }
 
 nav ul#tags {
@@ -136,6 +134,10 @@ nav ul#tags li:hover {
   background-color: transparent;
 }
 
+nav ul#tags li a:hover {
+  color: white;
+}
+
 nav ul#tags li a {
   text-align: center;
   color: #aaa;
@@ -145,15 +147,12 @@ nav ul#tags li a {
   line-height: 48px;
 }
 
-nav ul#tags li a:hover {
-  color: white;
-}
-
 div#functions {
   height: 48px;
   display: flex;
   align-items: center;
 }
+
 
 div#functions a:nth-child(1) {
   display: block;
@@ -184,7 +183,13 @@ div#functions button {
 	text-decoration:none;
 }
 
-div.entry-collection {
+nav ul {
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+
+.entry-collection {
   width: 600px;
   margin-top: 20px;
 }
@@ -199,13 +204,14 @@ article p, article ul {
   padding: 0;
 }
 
-/* sets the border to none and margin of the first article h2 to align with top of sidebar */
 #feed h2:nth-of-type(1) {
   margin-top: 0px;
 }
+
 #feed article:nth-of-type(1) {
   border: none;
 }
+/* sets the margin of the first article h2 to align with top of sidebar */
 
 #feed a {
   color: black;
@@ -217,22 +223,16 @@ article p, article ul {
   float: left;
 }
 
-#feed .left-btn {
-  float:left;
+div.btn {
+  display: flex;
+  justify-content: space-between;
 }
-
-#feed .left-btn li {
+.left-btn li {
   margin-right: 10px;
 }
-
-#feed .right-btn {
-  float: right;
-}
-
-#feed .right-btn li {
+.right-btn li {
   margin-left: 10px;
 }
-
 #feed .left-btn a {
   display: block;
   width: 42px;
@@ -240,28 +240,22 @@ article p, article ul {
   border: 1px solid #ddd;
   border-radius: 3px;
 }
-
 #feed .left-btn a:hover {
   border: 1px solid #666;
 }
-
-#feed .vote {
+.vote {
   background-image: url("http://assets-9gag-fun.9cache.com/s/fab0aa49/511af7f6a57c584ebf446e5bb740abbc08f711a8/static/dist/web6/img/sticky-vote.png");
 }
-
-#feed .up-vote {
+.up-vote {
   background-position: left top;
 }
-
-#feed .down-vote {
+.down-vote {
   background-position: left bottom;
 }
-
-#feed .comment {
+.comment {
   background-image: url("http://assets-9gag-fun.9cache.com/s/fab0aa49/511af7f6a57c584ebf446e5bb740abbc08f711a8/static/dist/web6/img/other-buttons.png");
   background-position: bottom;
 }
-
 #feed .right-btn a {
   display: block;
   color: #fff;
@@ -274,22 +268,20 @@ article p, article ul {
   background-image: url("http://assets-9gag-fun.9cache.com/s/fab0aa49/511af7f6a57c584ebf446e5bb740abbc08f711a8/static/dist/web6/img/sharing-button-a.png");
   background-repeat: no-repeat;
 }
-
-#feed .fb {
+.fb {
   background-color: #3b5998;
   background-position: left top;
 }
-
-#feed .tw {
+.tw {
   background-color: #00aced;
   background-position: left bottom;
 }
 
 
-/* Code fragments for a potential css dropdown menu
 
-nav ul li ul {
-  display:flex;
+/*nav a {
+  display: block;
   flex-direction: column;
-  position: relative;
+  width:200px;
+  height:60px;
 }*/
