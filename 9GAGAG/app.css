@@ -65,11 +65,6 @@ nav {
   margin: 0;
 }
 
-nav ul {
-  display:flex;
-  align-items: center;
-}
-
 nav #logo {
     height: 48px;
     width: 64px;
@@ -77,6 +72,7 @@ nav #logo {
     background-size: 40px 40px;
     box-sizing: border-box;
     border-right: 1px solid #333;
+    display: block;
 }
 
 nav #logo a {
@@ -85,11 +81,15 @@ nav #logo a {
   display: block;
 }
 
-nav #logo {
-  display: block;
+nav ul {
+  margin:0;
+  padding:0;
+  list-style: none;
+  display:flex;
+  align-items: center;
 }
 
-nav>ul li a {
+nav ul li a {
   text-align: center;
   color: #fff;
   font-weight: 700;
@@ -99,7 +99,7 @@ nav>ul li a {
 }
 
 nav ul#tags li a.danger:after {
-  content: 'New';
+  content: 'NSFW';
   position: relative;
   text-transform: uppercase;
   padding: 0 3px;
@@ -113,11 +113,11 @@ nav ul#tags li a.danger:after {
   line-height: 12px;
 }
 
-nav> ul li:hover {
+nav ul li:hover {
   background-color: rgba(255,255,255,.2);
 }
 
-nav> ul li {
+nav ul li {
   border-right: 1px solid #333;
   padding: 0 1em;
 }
@@ -153,7 +153,6 @@ div#functions {
   align-items: center;
 }
 
-
 div#functions a:nth-child(1) {
   display: block;
   width: 30px;
@@ -183,29 +182,19 @@ div#functions button {
 	text-decoration:none;
 }
 
-nav ul {
-  margin:0;
-  padding:0;
-  list-style: none;
-}
-
 .entry-collection {
   width: 600px;
   margin-top: 20px;
 }
 
 article {
-  margin-bottom: 80px;
+  margin-bottom: 20px;
   border-top: 1px solid #eee;
 }
 
 article p, article ul {
   margin: 10px 0;
   padding: 0;
-}
-
-#feed h2:nth-of-type(1) {
-  margin-top: 0px;
 }
 
 #feed article:nth-of-type(1) {
@@ -223,14 +212,14 @@ article p, article ul {
   float: left;
 }
 
-div.btn {
+#feed div.btn {
   display: flex;
   justify-content: space-between;
 }
-.left-btn li {
+#feed.left-btn li {
   margin-right: 10px;
 }
-.right-btn li {
+#feed.right-btn li {
   margin-left: 10px;
 }
 #feed .left-btn a {
@@ -243,16 +232,16 @@ div.btn {
 #feed .left-btn a:hover {
   border: 1px solid #666;
 }
-.vote {
+#feed .vote {
   background-image: url("http://assets-9gag-fun.9cache.com/s/fab0aa49/511af7f6a57c584ebf446e5bb740abbc08f711a8/static/dist/web6/img/sticky-vote.png");
 }
-.up-vote {
+#feed .up-vote {
   background-position: left top;
 }
-.down-vote {
+#feed .down-vote {
   background-position: left bottom;
 }
-.comment {
+#feed .comment {
   background-image: url("http://assets-9gag-fun.9cache.com/s/fab0aa49/511af7f6a57c584ebf446e5bb740abbc08f711a8/static/dist/web6/img/other-buttons.png");
   background-position: bottom;
 }
@@ -268,20 +257,11 @@ div.btn {
   background-image: url("http://assets-9gag-fun.9cache.com/s/fab0aa49/511af7f6a57c584ebf446e5bb740abbc08f711a8/static/dist/web6/img/sharing-button-a.png");
   background-repeat: no-repeat;
 }
-.fb {
+#feed .fb {
   background-color: #3b5998;
   background-position: left top;
 }
-.tw {
+#feed .tw {
   background-color: #00aced;
   background-position: left bottom;
 }
-
-
-
-/*nav a {
-  display: block;
-  flex-direction: column;
-  width:200px;
-  height:60px;
-}*/
