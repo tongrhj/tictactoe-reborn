@@ -1,0 +1,316 @@
+
+
+body {
+  display:flex;
+  font: 13px Helvetica;
+}
+
+main {display:flex;align-content: center;margin: 48px auto 0 auto;}
+
+#feed {
+  width: 600px;
+}
+
+#sidebar-container {
+  width: 300px;
+}
+
+#sidebar-container .sidebar {
+  display: flex;
+  max-width: 300px;
+  padding-left: 40px;
+  margin: 0px;
+}
+#sidebar-container .sidebar-contents {
+  max-width: 300px;
+  padding-top: 20px;
+  margin: 0;
+  flex-direction: column;
+}
+#sidebar-container .item-container {
+  max-width: inherit;
+}
+#sidebar-container .text-container {
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+#sidebar-container .img-container {
+  max-width: 300px;
+  height: 105px;
+  overflow: hidden;
+}
+
+#sidebar-container ul, #sidebar-container li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0;
+}
+#sidebar-container h3 {
+  display: block;
+  font: 13px helvetica;
+  font-weight: bold;
+  margin: inherit;
+}
+
+#sidebar-container a, #sidebar-container a:active, #sidebar-container a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+#sidebar-container a:hover, #feed a:hover {
+  color: #09f;
+}
+
+#sidebar-container img {
+  max-width: 100%;
+}
+
+span.emoji {
+  font-weight: normal;
+}
+
+nav {
+  display: flex;
+  height: 48px;
+  background-color:black;
+  width:100%;
+  position: fixed;
+  top:0;
+  left: 0;
+  margin: 0;
+}
+
+nav ul {
+  display:flex;
+  align-items: center;
+}
+
+nav #logo {
+    height: 48px;
+    width: 64px;
+    background: url(http://assets-9gag-fun.9cache.com/s/fab0aa49/511af7f6a57c584ebf446e5bb740abbc08f711a8/static/dist/web6/img/header-logo.png) center center no-repeat;
+    background-size: 40px 40px;
+    box-sizing: border-box;
+    border-right: 1px solid #333;
+}
+
+nav #logo a {
+  text-indent: -9999px;
+  overflow: hidden;
+  display: block;
+}
+
+nav #logo {
+  display: block;
+}
+
+nav>ul li a {
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  width: 56px;
+  line-height: 48px;
+}
+
+nav ul#tags li a.danger:after {
+  content: 'New';
+  position: relative;
+  text-transform: uppercase;
+  padding: 0 3px;
+  top: -10px;
+  right: 0;
+  color: #fff;
+  font-size: 8px;
+  border-radius: 2px;
+  background-color: red;
+  height: 12px;
+  line-height: 12px;
+}
+
+nav> ul li:hover {
+  background-color: rgba(255,255,255,.2);
+}
+
+nav> ul li {
+  border-right: 1px solid #333;
+  padding: 0 1em;
+}
+
+nav ul#tags {
+  flex-grow:2;
+}
+
+nav ul#tags li {
+  border-right: none;
+}
+
+nav ul#tags li:hover {
+  background-color: transparent;
+}
+
+nav ul#tags li a:hover {
+  color: white;
+}
+
+nav ul#tags li a {
+  text-align: center;
+  color: #aaa;
+  font-weight: 300;
+  text-decoration: none;
+  width: 56px;
+  line-height: 48px;
+}
+
+div#functions {
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+
+div#functions a:nth-child(1) {
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-indent: -999px;
+  overflow: hidden;
+  background: url(http://assets-9gag-fun.9cache.com/s/fab0aa49/511af7f6a57c584ebf446e5bb740abbc08f711a8/static/dist/web6/img/sprite-search.png) center 0 / 30px 60px no-repeat;
+}
+
+div#functions a:nth-child(1):hover {
+  background: url(http://assets-9gag-fun.9cache.com/s/fab0aa49/511af7f6a57c584ebf446e5bb740abbc08f711a8/static/dist/web6/img/sprite-search.png) center -30px / 30px 60px no-repeat;
+}
+
+div#functions button {
+	background-color:#09f;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	border:none;
+	display:inline-block;
+	cursor:pointer;
+  font-weight: 700;
+	color:#ffffff;
+  height: 30px;
+  padding: 0 16px;
+  margin: 0 1em;
+	text-decoration:none;
+}
+
+nav ul {
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+
+.entry-collection {
+  width: 600px;
+  margin-top: 20px;
+}
+
+article {
+  margin-bottom: 80px;
+  border-top: 1px solid #eee;
+}
+
+article p, article ul {
+  margin: 10px 0;
+  padding: 0;
+}
+
+#feed h2:nth-of-type(1) {
+  margin-top: 0px;
+}
+
+#feed article:nth-of-type(1) {
+  border: none;
+}
+/* sets the margin of the first article h2 to align with top of sidebar */
+
+#feed a {
+  color: black;
+  text-decoration: none;
+}
+
+#feed li {
+  list-style: none;
+  float: left;
+}
+
+.left-btn {
+  float:left;
+}
+
+.left-btn li {
+  margin-right: 10px;
+}
+
+#feed .right-btn {
+  float: right;
+}
+
+.right-btn li {
+  margin-left: 10px;
+}
+
+#feed .left-btn a {
+  display: block;
+  width: 42px;
+  height: 32px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+#feed .left-btn a:hover {
+  border: 1px solid #666;
+}
+
+.vote {
+  background-image: url("http://assets-9gag-fun.9cache.com/s/fab0aa49/511af7f6a57c584ebf446e5bb740abbc08f711a8/static/dist/web6/img/sticky-vote.png");
+}
+
+.up-vote {
+  background-position: left top;
+}
+
+.down-vote {
+  background-position: left bottom;
+}
+
+.comment {
+  background-image: url("http://assets-9gag-fun.9cache.com/s/fab0aa49/511af7f6a57c584ebf446e5bb740abbc08f711a8/static/dist/web6/img/other-buttons.png");
+  background-position: bottom;
+}
+
+#feed .right-btn a {
+  display: block;
+  color: #fff;
+  font-weight: 700;
+  height: 34px;
+  line-height: 34px;
+  padding: 0 15px 0 34px;
+  border-radius: 3px;
+  text-align: center;
+  background-image: url("http://assets-9gag-fun.9cache.com/s/fab0aa49/511af7f6a57c584ebf446e5bb740abbc08f711a8/static/dist/web6/img/sharing-button-a.png");
+  background-repeat: no-repeat;
+}
+
+.fb {
+  background-color: #3b5998;
+  background-position: left top;
+}
+
+.tw {
+  background-color: #00aced;
+  background-position: left bottom;
+}
+
+
+
+/*nav a {
+  display: block;
+  flex-direction: column;
+  width:200px;
+  height:60px;
+}*/
