@@ -225,22 +225,16 @@ article p, article ul {
   float: left;
 }
 
-.left-btn {
-  float:left;
+div.btn {
+  display: flex;
+  justify-content: space-between;
 }
-
 .left-btn li {
   margin-right: 10px;
 }
-
-#feed .right-btn {
-  float: right;
-}
-
 .right-btn li {
   margin-left: 10px;
 }
-
 #feed .left-btn a {
   display: block;
   width: 42px;
@@ -248,28 +242,22 @@ article p, article ul {
   border: 1px solid #ddd;
   border-radius: 3px;
 }
-
 #feed .left-btn a:hover {
   border: 1px solid #666;
 }
-
 .vote {
   background-image: url("http://assets-9gag-fun.9cache.com/s/fab0aa49/511af7f6a57c584ebf446e5bb740abbc08f711a8/static/dist/web6/img/sticky-vote.png");
 }
-
 .up-vote {
   background-position: left top;
 }
-
 .down-vote {
   background-position: left bottom;
 }
-
 .comment {
   background-image: url("http://assets-9gag-fun.9cache.com/s/fab0aa49/511af7f6a57c584ebf446e5bb740abbc08f711a8/static/dist/web6/img/other-buttons.png");
   background-position: bottom;
 }
-
 #feed .right-btn a {
   display: block;
   color: #fff;
@@ -282,12 +270,10 @@ article p, article ul {
   background-image: url("http://assets-9gag-fun.9cache.com/s/fab0aa49/511af7f6a57c584ebf446e5bb740abbc08f711a8/static/dist/web6/img/sharing-button-a.png");
   background-repeat: no-repeat;
 }
-
 .fb {
   background-color: #3b5998;
   background-position: left top;
 }
-
 .tw {
   background-color: #00aced;
   background-position: left bottom;
