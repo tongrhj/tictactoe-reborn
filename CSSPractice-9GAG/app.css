@@ -5,10 +5,6 @@ body {
 
 main {display:flex;align-content: center;margin: 48px auto 0 auto;}
 
-#feed {
-  width: 600px;
-}
-
 #sidebar-container {
   width: 300px;
 }
@@ -182,69 +178,84 @@ div#functions button {
 	text-decoration:none;
 }
 
-.entry-collection {
+#feed {
   width: 600px;
-  margin-top: 20px;
 }
 
-article {
-  margin-bottom: 20px;
+#feed article {
+  padding-top: 10px;
+  margin-bottom: 30px;
   border-top: 1px solid #eee;
 }
 
-article p, article ul {
-  margin: 10px 0;
-  padding: 0;
-}
-
-#feed article:nth-of-type(1) {
+#feed article:first-of-type {
   border: none;
 }
 /* sets the margin of the first article h2 to align with top of sidebar */
+
+#feed article h2, #feed article p, #feed article .btn-container {
+  margin: 10px 0;
+  padding: 0;
+}
 
 #feed a {
   color: black;
   text-decoration: none;
 }
 
-#feed li {
-  list-style: none;
-  float: left;
-}
-
-#feed div.btn {
+#feed .btn-container {
   display: flex;
   justify-content: space-between;
+  width: 500px;
 }
-#feed.left-btn li {
-  margin-right: 10px;
+
+#feed .left-btn, #feed .right-btn {
+  display: flex;
 }
-#feed.right-btn li {
-  margin-left: 10px;
-}
+
 #feed .left-btn a {
   display: block;
   width: 42px;
   height: 32px;
   border: 1px solid #ddd;
   border-radius: 3px;
+  margin-right: 10px;
+  text-indent: -999px;
 }
-#feed .left-btn a:hover {
-  border: 1px solid #666;
-}
-#feed .vote {
+
+#feed a.vote {
   background-image: url("http://assets-9gag-fun.9cache.com/s/fab0aa49/511af7f6a57c584ebf446e5bb740abbc08f711a8/static/dist/web6/img/sticky-vote.png");
 }
-#feed .up-vote {
+
+#feed a.up-vote {
   background-position: left top;
 }
-#feed .down-vote {
+
+#feed a.down-vote {
   background-position: left bottom;
 }
-#feed .comment {
+
+#feed a.comment {
   background-image: url("http://assets-9gag-fun.9cache.com/s/fab0aa49/511af7f6a57c584ebf446e5bb740abbc08f711a8/static/dist/web6/img/other-buttons.png");
   background-position: bottom;
 }
+
+#feed .left-btn a:hover {
+  border-color: #666;
+}
+
+#feed a.up-vote:hover {
+    background-position: right top;
+}
+
+#feed a.down-vote:hover {
+    background-position: right bottom;
+}
+
+#feed a.comment:hover {
+  background-position: top;
+}
+
 #feed .right-btn a {
   display: block;
   color: #fff;
@@ -253,15 +264,26 @@ article p, article ul {
   line-height: 34px;
   padding: 0 15px 0 34px;
   border-radius: 3px;
+  margin-left: 10px;
   text-align: center;
   background-image: url("http://assets-9gag-fun.9cache.com/s/fab0aa49/511af7f6a57c584ebf446e5bb740abbc08f711a8/static/dist/web6/img/sharing-button-a.png");
   background-repeat: no-repeat;
 }
-#feed .fb {
+
+#feed a.fb {
   background-color: #3b5998;
   background-position: left top;
 }
-#feed .tw {
+
+#feed a.fb:hover {
+  background-color: #4c70ba;
+}
+
+#feed a.tw {
   background-color: #00aced;
   background-position: left bottom;
+}
+
+#feed a.tw:hover {
+  background-color: #21c2ff;
 }
