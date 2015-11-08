@@ -1,0 +1,89 @@
+'use strict'
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display:none;
+}
+/*
+Tic tac toe board layout
+|----------------|
+|     header     |
+|----------------|
+|  1  | 2   |  3 |
+------------------
+|  4  |  5  |  6 |
+------------------
+|  7  |  8  |  9 |
+------------------
+*/
+
+div#t3board {
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  min-height:100%;
+}
+
+div.t3row {
+  display:flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+div#t3board > .t3row > div {
+  background-color: white;
+  border: 10px solid black;
+  flex: 1;
+  text-align: center;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+div#t3board > .t3row > div.b1 {
+  border-width: 0px 10px 10px 0px;
+}
+
+div#t3board > .t3row > div.b2 {
+  border-width: 0px 10px 10px 10px;
+}
+
+div#t3board > .t3row > div.b3 {
+  border-width: 0px 0px 10px 10px;
+}
+
+div#t3board > .t3row > div.b4 {
+  border-left-width: 0px;
+}
+
+div#t3board > .t3row > div.b6 {
+  border-right-width: 0px;
+}
+
+div#t3board > .t3row > div.b7 {
+  border-width: 10px 10px 0px 0px;
+}
+
+div#t3board > .t3row > div.b8 {
+  border-width: 10px 10px 0px 10px;
+}
+
+div#t3board > .t3row > div.b9 {
+  border-width: 10px 0px 0px 10px;
+}
+
+div#t3board > .t3row > * {
+  vertical-align: middle;
+}
