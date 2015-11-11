@@ -24,17 +24,31 @@ function runGame (event) {
 }
 
 function checkWinner () {
+  //derived from Albert's solution
   var winningMoves = [ [0, 1, 2], [3, 4, 5], [6, 7, 8],
                        [0, 3, 6], [1, 4, 7], [2, 5, 8],
                        [0, 4, 8], [2, 4, 6]]
+  // Cbas in class: use '.some' function instead of forEach
   winningMoves.forEach(function (winTiles) {
     findWinMoveInMoves(winTiles[0], winTiles[1], winTiles[2])
   })
+  if ((movesMade[1] !== '') &&
+     (movesMade[2] !== '') &&
+     (movesMade[3] !== '') &&
+     (movesMade[4] !== '') &&
+     (movesMade[5] !== '') &&
+     (movesMade[6] !== '') &&
+     (movesMade[7] !== '') &&
+     (movesMade[8] !== '') &&
+     (movesMade[0] !== '')) {
+    console.log('Stalemate')
+    promptNewGame()
+  }
 }
 
 function findWinMoveInMoves (winTile1, winTile2, winTile3) {
   movesMade = (Array.from(document.getElementsByClassName('t3box'))
-                    .map(getMoves))
+                    .map(tile => tile.textContent))
   // if any of the winning move tiles are empty, stop function, because winningMove has not been played
   if (movesMade[winTile1] === '' ||
       movesMade[winTile2] === '' ||
@@ -49,26 +63,13 @@ function findWinMoveInMoves (winTile1, winTile2, winTile3) {
   }
 }
 
-// function checkStalemate (movesMade) {
-//   var gameOver
-//   movesMade.forEach(function (move) {
-//       if (move === '') { gameOver = false }
-//   }
-//   if (gameOver) { return true } else { return false }
-// )
-// }
-
 function promptNewGame () {
   gameboard.removeEventListener('click', runGame)
   setTimeout(function () {
-    var startNewGame = window.prompt('Start a New Game?', 'Type yes or no')
-    if (startNewGame === 'yes') { resetGame(); console.log('starting new game') }
+    var startNewGame = window.confirm('Start a New Game?')
+    if (startNewGame) { resetGame(); console.log('starting new game') }
+    else { window.alert('Are you not entertained?!') }
   }, 750)
-}
-
-function getMoves (tile) {
-  var move = tile.textContent
-  return move
 }
 
 function resetGame () {
