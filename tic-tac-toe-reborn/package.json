@@ -4,8 +4,8 @@
   "description": "Tic Tac Toe Game, project for GA SG WDI 2015",
   "main": "game.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "browserify game.js --outfile game.dist.js --transform babelify" 
+    "test": "standard",
+    "dev": "browserify game.js --outfile game.dist.js --transform babelify"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
   "dependencies": {
     "babel-preset-es2015": "^6.1.2",
     "babelify": "^7.2.0",
-    "browserify": "^12.0.1"
+    "browserify": "^12.0.1",
+    "standard": "^5.3.1"
   }
 }
