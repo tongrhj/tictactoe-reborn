@@ -24,7 +24,7 @@ function runGame (event) {
 }
 
 function checkWinner () {
-  //derived from Albert's solution
+  // derived from Albert's solution
   var winningMoves = [ [0, 1, 2], [3, 4, 5], [6, 7, 8],
                        [0, 3, 6], [1, 4, 7], [2, 5, 8],
                        [0, 4, 8], [2, 4, 6]]
@@ -67,8 +67,10 @@ function promptNewGame () {
   gameboard.removeEventListener('click', runGame)
   setTimeout(function () {
     var startNewGame = window.confirm('Start a New Game?')
-    if (startNewGame) { resetGame(); console.log('starting new game') }
-    else { window.alert('Are you not entertained?!') }
+    if (startNewGame) {
+      resetGame()
+      console.log('starting new game')
+    } else window.alert('Are you not entertained?!')
   }, 750)
 }
 
