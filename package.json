@@ -1,5 +1,5 @@
 {
-  "name": "tic-tac-toe-reborn",
+  "name": "tictactoe-reborn-reborn",
   "version": "1.0.0",
   "description": "Tic Tac Toe Game, project for GA SG WDI 2015",
   "main": "game.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tongrhj/wdi-sg-playground.git"
+    "url": "git+https://github.com/tongrhj/tictactoe-reborn.git"
   },
   "keywords": [
     "tictactoe",
@@ -19,9 +19,9 @@
   "author": "@tongrhj",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tongrhj/wdi-sg-playground/issues"
+    "url": "https://github.com/tongrhj/tictactoe-reborn/issues"
   },
-  "homepage": "https://github.com/tongrhj/wdi-sg-playground#readme",
+  "homepage": "https://github.com/tongrhj/tictactoe-reborn#readme",
   "dependencies": {
     "babel-preset-es2015": "^6.1.2",
     "babelify": "^7.2.0",
