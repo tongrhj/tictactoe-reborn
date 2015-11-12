@@ -70,6 +70,7 @@ div#t3board {
   display:flex;
   flex-direction: column;
   min-height: calc(100% - 75px);
+  cursor: pointer;
 }
 
 div.t3row {
