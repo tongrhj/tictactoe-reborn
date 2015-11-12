@@ -4,7 +4,7 @@
   "description": "Tic Tac Toe Game, project for GA SG WDI 2015",
   "main": "game.js",
   "scripts": {
-    "start": "npm run build && http-server"
+    "start": "npm run build && http-server",
     "test": "standard",
     "dev": "browserify game.js --outfile game.dist.js --transform babelify"
   },
