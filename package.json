@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run build && http-server",
     "test": "standard",
-    "dev": "browserify game.js --outfile game.dist.js --transform babelify"
+    "build": "browserify game.js --outfile game.dist.js --transform babelify"
   },
   "repository": {
     "type": "git",
