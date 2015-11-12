@@ -12,7 +12,7 @@ function runGame (event) {
   // if thing clicked is not t3 box, do nothing
   if (tile.classList[0] !== 't3box') { return }
   // if tile alrady has content, do nothing
-  if (tile.textContent) { return }
+  if (tile.textContent === 'X' || tile.textContent === 'O') { return }
   if (currentPlayer === 1) {
     tile.textContent = 'X'
     currentPlayer = 0
