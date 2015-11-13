@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  min-height: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  background-color: white;
+  color: black;
+  min-height: 75px;
+  height: 75px;
+}
+
+header h1 {
+  margin: 10px;
+  font-weight: 100;
+}
+
+/*
+Tic tac toe board layout
+|----------------|
+|     header     |
+|----------------|
+|  1  | 2   |  3 |
+------------------
+|  4  |  5  |  6 |
+------------------
+|  7  |  8  |  9 |
+------------------
+*/
+
+@media screen and (min-width: 480px) {
+    header {
+        background-color: black;
+        width: 20%;
+        min-width: 200px;
+        color: white;
+        height:  100%;
+        min-height: 100%;
+    }
+
+    header h1 {
+      margin: 10px;
+    }
+
+    body {
+      display:flex;
+      flex-direction: row;
+    }
+
+    div#t3board {
+      width: 80%;
+      min-height:100%;
+    }
+}
+
+div#t3board {
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  min-height: calc(100% - 75px);
+  cursor: pointer;
+}
+
+div.t3row {
+  display:flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+div#t3board > .t3row > div {
+  background-color: white;
+  border: 1px solid black;
+  flex: 1;
+  text-align: center;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+
+div#t3board > .t3row > div.b1 {
+  border-width: 0px 1px 1px 0px;
+}
+
+div#t3board > .t3row > div.b2 {
+  border-width: 0px 1px 1px 1px;
+}
+
+div#t3board > .t3row > div.b3 {
+  border-width: 0px 0px 1px 1px;
+}
+
+div#t3board > .t3row > div.b4 {
+  border-left-width: 0px;
+}
+
+div#t3board > .t3row > div.b6 {
+  border-right-width: 0px;
+}
+
+div#t3board > .t3row > div.b7 {
+  border-width: 1px 1px 0px 0px;
+}
+
+div#t3board > .t3row > div.b8 {
+  border-width: 1px 1px 0px 1px;
+}
+
+div#t3board > .t3row > div.b9 {
+  border-width: 1px 0px 0px 1px;
+}
+
+div#t3board > .t3row > * {
+  vertical-align: middle;
+}
