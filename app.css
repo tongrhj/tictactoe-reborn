@@ -8,6 +8,8 @@ html, body {
   padding: 0;
   background-color: black;
   min-height: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
 }
 
 body {
@@ -25,6 +27,7 @@ header {
 
 header h1 {
   margin: 10px;
+  font-weight: 100;
 }
 
 /*
@@ -81,7 +84,7 @@ div.t3row {
 
 div#t3board > .t3row > div {
   background-color: white;
-  border: 10px solid black;
+  border: 1px solid black;
   flex: 1;
   text-align: center;
   font-size: 60px;
@@ -94,15 +97,15 @@ div#t3board > .t3row > div {
 
 
 div#t3board > .t3row > div.b1 {
-  border-width: 0px 10px 10px 0px;
+  border-width: 0px 1px 1px 0px;
 }
 
 div#t3board > .t3row > div.b2 {
-  border-width: 0px 10px 10px 10px;
+  border-width: 0px 1px 1px 1px;
 }
 
 div#t3board > .t3row > div.b3 {
-  border-width: 0px 0px 10px 10px;
+  border-width: 0px 0px 1px 1px;
 }
 
 div#t3board > .t3row > div.b4 {
@@ -114,15 +117,15 @@ div#t3board > .t3row > div.b6 {
 }
 
 div#t3board > .t3row > div.b7 {
-  border-width: 10px 10px 0px 0px;
+  border-width: 1px 1px 0px 0px;
 }
 
 div#t3board > .t3row > div.b8 {
-  border-width: 10px 10px 0px 10px;
+  border-width: 1px 1px 0px 1px;
 }
 
 div#t3board > .t3row > div.b9 {
-  border-width: 10px 0px 0px 10px;
+  border-width: 1px 0px 0px 1px;
 }
 
 div#t3board > .t3row > * {
