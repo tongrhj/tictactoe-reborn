@@ -29,9 +29,9 @@ function checkWinner () {
                        [0, 3, 6], [1, 4, 7], [2, 5, 8],
                        [0, 4, 8], [2, 4, 6]]
   // Cbas in class: use '.some' function instead of forEach
-  winningMoves.forEach(function (winTiles) {
+  winningMoves.forEach(winTiles =>
     findWinMoveInMoves(winTiles[0], winTiles[1], winTiles[2])
-  })
+  )
   if ((movesMade[1] !== '') &&
      (movesMade[2] !== '') &&
      (movesMade[3] !== '') &&

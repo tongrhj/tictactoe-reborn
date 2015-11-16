@@ -80,6 +80,7 @@ div.t3row {
   display:flex;
   flex-direction: row;
   flex: 1;
+  flex-basis: 33%;
 }
 
 div#t3board > .t3row > div {
@@ -93,6 +94,7 @@ div#t3board > .t3row > div {
   flex-direction: column;
   margin: 0;
   padding: 0;
+  flex-basis: 33%;
 }
 
 

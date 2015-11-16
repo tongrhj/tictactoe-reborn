@@ -6,7 +6,8 @@
   "scripts": {
     "start": "npm run build && http-server",
     "test": "standard",
-    "build": "browserify game.js --outfile game.dist.js --transform babelify",
+    "build": "npm run build-js && npm run build-css",
+    "build-js": "browserify game.js --outfile game.dist.js --transform babelify",
     "build-css": "cp app.css app.dist.css",
     "watch": "npm run start && npm run watch-js & npm run watch-css",
     "watch-css": "watch-spawn -p 'app.css' npm run build-css",
